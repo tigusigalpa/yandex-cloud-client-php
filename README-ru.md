@@ -4,6 +4,8 @@
 
 ### 🚀 Современный PHP SDK для Yandex Cloud API
 
+![Yandex Cloud Client PHP](https://github.com/user-attachments/assets/2f1677ca-dbed-4311-8c1d-cc269077de93)
+
 [![Latest Version](https://img.shields.io/packagist/v/tigusigalpa/yandex-cloud-client-php.svg?style=flat&logo=packagist)](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
 [![Total Downloads](https://img.shields.io/packagist/dt/tigusigalpa/yandex-cloud-client-php.svg?style=flat&logo=packagist)](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
 [![PHP Version](https://img.shields.io/packagist/php-v/tigusigalpa/yandex-cloud-client-php.svg?style=flat&logo=php)](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
@@ -26,12 +28,14 @@
 <td width="50%">
 
 ### 🔐 Авторизация и безопасность
+
 - **OAuth 2.0** поддержка токенов
 - **Автоматический IAM** генерация токенов
 - **Умное кэширование** с авто-обновлением
 - **Управление сроком** действия (12ч)
 
 ### 🏢 Управление ресурсами
+
 - **Организации** - Полный CRUD и управление доступом
 - **Облака** - Полный жизненный цикл
 - **Каталоги** - Операции и права доступа
@@ -44,12 +48,14 @@
 <td width="50%">
 
 ### 🎯 Интеграция с Laravel
+
 - **Service Provider** с авто-обнаружением
 - **Facade** для элегантного синтаксиса
 - **Конфиг** с поддержкой .env
 - **Dependency Injection** готов
 
 ### 💎 Качество кода
+
 - **PHP 8.0+** со строгой типизацией
 - **Полные type hints** повсюду
 - **PSR-12** совместимость
@@ -61,11 +67,11 @@
 
 ## 📋 Требования
 
-| Требование | Версия |
-|------------|--------|
-| PHP | 8.0+ |
-| Guzzle HTTP | 7.0+ |
-| Laravel | 8.0+ (опционально) |
+| Требование  | Версия             |
+|-------------|--------------------|
+| PHP         | 8.0+               |
+| Guzzle HTTP | 7.0+               |
+| Laravel     | 8.0+ (опционально) |
 
 ## 🚀 Быстрый старт
 
@@ -80,7 +86,8 @@ composer require tigusigalpa/yandex-cloud-client-php
 <details>
 <summary>📝 Нажмите, чтобы узнать, как получить OAuth токен</summary>
 
-1. Перейдите на [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb)
+1. Перейдите
+   на [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb)
 2. Авторизуйте приложение
 3. Скопируйте токен из URL
 4. Используйте его в коде
@@ -553,7 +560,8 @@ cp .env.example .env
 
 ## 🔒 Безопасность
 
-Если вы обнаружили уязвимости безопасности, пожалуйста, напишите на **sovletig@gmail.com** вместо использования issue tracker.
+Если вы обнаружили уязвимости безопасности, пожалуйста, напишите на **sovletig@gmail.com** вместо использования issue
+tracker.
 
 Мы серьёзно относимся к безопасности и оперативно реагируем.
 
@@ -637,23 +645,25 @@ git push origin v1.0.0
 
 Изучите наши другие пакеты для Yandex Cloud:
 
-| Пакет | Описание | Ссылки |
-|-------|----------|--------|
-| **YandexGPT PHP** | SDK для YandexGPT API | [GitHub](https://github.com/tigusigalpa/yandexgpt-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexgpt-php) |
-| **Yandex Cloud Billing** | SDK для Billing API | [GitHub](https://github.com/tigusigalpa/yandexcloud-billing-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexcloud-billing-php) |
-| **Yandex Lockbox** | SDK для Lockbox API | [GitHub](https://github.com/tigusigalpa/yandex-lockbox-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandex-lockbox-php) |
+| Пакет                    | Описание              | Ссылки                                                                                                                                             |
+|--------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| **YandexGPT PHP**        | SDK для YandexGPT API | [GitHub](https://github.com/tigusigalpa/yandexgpt-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexgpt-php)                     |
+| **Yandex Cloud Billing** | SDK для Billing API   | [GitHub](https://github.com/tigusigalpa/yandexcloud-billing-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexcloud-billing-php) |
+| **Yandex Lockbox**       | SDK для Lockbox API   | [GitHub](https://github.com/tigusigalpa/yandex-lockbox-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandex-lockbox-php)           |
 
 ---
 
 ## 🔗 Полезные ссылки
 
 ### Официальная документация
+
 - 📖 [Документация Yandex Cloud](https://yandex.cloud/docs)
 - 🏢 [Справка по Organization API](https://yandex.cloud/ru/docs/organization/api-ref/)
 - ☁️ [Справка по Resource Manager API](https://yandex.cloud/ru/docs/resource-manager/api-ref/)
 - 🔐 [Справка по IAM API](https://yandex.cloud/ru/docs/iam/api-ref/)
 
 ### Ресурсы пакета
+
 - 📦 [Пакет на Packagist](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
 - 🐙 [Репозиторий на GitHub](https://github.com/tigusigalpa/yandex-cloud-client-php)
 - 🐛 [Трекер проблем](https://github.com/tigusigalpa/yandex-cloud-client-php/issues)

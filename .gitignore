@@ -1,13 +1,59 @@
+# Dependencies
 /vendor/
 /node_modules/
 composer.lock
-.phpunit.result.cache
-.php-cs-fixer.cache
-.phpunit.cache
+package-lock.json
+
+# IDE
 .idea/
 .vscode/
-*.log
-.DS_Store
-Thumbs.db
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+.phpunit.result.cache
+.phpunit.cache
 /build/
 /coverage/
+phpunit.xml.dist
+
+# Code Quality
+.php-cs-fixer.cache
+.php_cs.cache
+.phpstan.cache
+/phpstan/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Build artifacts
+/dist/
+/public/build/
+/public/hot
+/public/storage
+/storage/*.key

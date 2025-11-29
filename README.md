@@ -4,6 +4,8 @@
 
 ### 🚀 Modern PHP SDK for Yandex Cloud API
 
+![Yandex Cloud Client PHP](https://github.com/user-attachments/assets/2f1677ca-dbed-4311-8c1d-cc269077de93)
+
 [![Latest Version](https://img.shields.io/packagist/v/tigusigalpa/yandex-cloud-client-php.svg?style=flat&logo=packagist)](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
 [![Total Downloads](https://img.shields.io/packagist/dt/tigusigalpa/yandex-cloud-client-php.svg?style=flat&logo=packagist)](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
 [![PHP Version](https://img.shields.io/packagist/php-v/tigusigalpa/yandex-cloud-client-php.svg?style=flat&logo=php)](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
@@ -26,12 +28,14 @@ Manage organizations, clouds, folders, and IAM authentication with clean, modern
 <td width="50%">
 
 ### 🔐 Authentication & Security
+
 - **OAuth 2.0** token support
 - **Automatic IAM** token generation
 - **Smart caching** with auto-refresh
 - **Token expiry** management (12h)
 
 ### 🏢 Resource Management
+
 - **Organizations** - Full CRUD & access control
 - **Clouds** - Complete lifecycle management
 - **Folders** - Operations & permissions
@@ -44,12 +48,14 @@ Manage organizations, clouds, folders, and IAM authentication with clean, modern
 <td width="50%">
 
 ### 🎯 Laravel Integration
+
 - **Service Provider** with auto-discovery
 - **Facade** for elegant syntax
 - **Config** with .env support
 - **Dependency Injection** ready
 
 ### 💎 Code Quality
+
 - **PHP 8.0+** with strict types
 - **Full type hints** everywhere
 - **PSR-12** compliant
@@ -61,11 +67,11 @@ Manage organizations, clouds, folders, and IAM authentication with clean, modern
 
 ## 📋 Requirements
 
-| Requirement | Version |
-|------------|--------|
-| PHP | 8.0+ |
-| Guzzle HTTP | 7.0+ |
-| Laravel | 8.0+ (optional) |
+| Requirement | Version         |
+|-------------|-----------------|
+| PHP         | 8.0+            |
+| Guzzle HTTP | 7.0+            |
+| Laravel     | 8.0+ (optional) |
 
 ## 🚀 Quick Start
 
@@ -80,7 +86,10 @@ composer require tigusigalpa/yandex-cloud-client-php
 <details>
 <summary>📝 Click to see how to get OAuth token</summary>
 
-1. Visit [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb)
+1.
+
+Visit [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb)
+
 2. Authorize the application
 3. Copy the token from URL
 4. Use it in your code
@@ -638,23 +647,25 @@ Free to use in personal and commercial projects. ✨
 
 Explore our other Yandex Cloud packages:
 
-| Package | Description | Links |
-|---------|-------------|-------|
-| **YandexGPT PHP** | SDK for YandexGPT API | [GitHub](https://github.com/tigusigalpa/yandexgpt-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexgpt-php) |
-| **Yandex Cloud Billing** | Billing API SDK | [GitHub](https://github.com/tigusigalpa/yandexcloud-billing-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexcloud-billing-php) |
-| **Yandex Lockbox** | Lockbox API SDK | [GitHub](https://github.com/tigusigalpa/yandex-lockbox-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandex-lockbox-php) |
+| Package                  | Description           | Links                                                                                                                                              |
+|--------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| **YandexGPT PHP**        | SDK for YandexGPT API | [GitHub](https://github.com/tigusigalpa/yandexgpt-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexgpt-php)                     |
+| **Yandex Cloud Billing** | Billing API SDK       | [GitHub](https://github.com/tigusigalpa/yandexcloud-billing-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandexcloud-billing-php) |
+| **Yandex Lockbox**       | Lockbox API SDK       | [GitHub](https://github.com/tigusigalpa/yandex-lockbox-php) • [Packagist](https://packagist.org/packages/tigusigalpa/yandex-lockbox-php)           |
 
 ---
 
 ## 🔗 Useful Links
 
 ### Official Documentation
+
 - 📖 [Yandex Cloud Documentation](https://yandex.cloud/docs)
 - 🏢 [Organization API Reference](https://yandex.cloud/ru/docs/organization/api-ref/)
 - ☁️ [Resource Manager API Reference](https://yandex.cloud/ru/docs/resource-manager/api-ref/)
 - 🔐 [IAM API Reference](https://yandex.cloud/ru/docs/iam/api-ref/)
 
 ### Package Resources
+
 - 📦 [Packagist Package](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
 - 🐙 [GitHub Repository](https://github.com/tigusigalpa/yandex-cloud-client-php)
 - 🐛 [Issue Tracker](https://github.com/tigusigalpa/yandex-cloud-client-php/issues)
