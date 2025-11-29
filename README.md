@@ -86,12 +86,9 @@ composer require tigusigalpa/yandex-cloud-client-php
 <details>
 <summary>📝 Click to see how to get OAuth token</summary>
 
-1.
-
-Visit [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb)
-
+1. Visit [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb)
 2. Authorize the application
-3. Copy the token from URL
+3. Copy the token
 4. Use it in your code
 
 💡 **Tip**: Store tokens securely in environment variables!
