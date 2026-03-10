@@ -1,8 +1,4 @@
-<div align="center">
-
-# ☁️ Yandex Cloud Client PHP
-
-### 🚀 Modern PHP SDK for Yandex Cloud API
+# Yandex Cloud Client PHP
 
 ![Yandex Cloud Client PHP](https://github.com/user-attachments/assets/2f1677ca-dbed-4311-8c1d-cc269077de93)
 
@@ -11,61 +7,28 @@
 [![PHP Version](https://img.shields.io/packagist/php-v/tigusigalpa/yandex-cloud-client-php.svg?style=flat&logo=php)](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
 [![License](https://img.shields.io/packagist/l/tigusigalpa/yandex-cloud-client-php.svg?style=flat)](LICENSE)
 
-[🇷🇺 Русская версия](README.md) • [📦 Packagist](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php) • [🐙 GitHub](https://github.com/tigusigalpa/yandex-cloud-client-php)
+[Russian version](README.md) · [Packagist](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php) · [GitHub](https://github.com/tigusigalpa/yandex-cloud-client-php)
 
-**Powerful, elegant, and developer-friendly PHP SDK for Yandex Cloud API with seamless Laravel integration.**
+PHP SDK for Yandex Cloud API. Works standalone or with Laravel.
 
-Manage organizations, clouds, folders, and IAM authentication with clean, modern PHP 8.0+ code.
-
-</div>
+Covers organizations, clouds, folders, service accounts, and IAM authorization.
 
 ---
 
-## ✨ Features
+## Features
 
-<table>
-<tr>
-<td width="50%">
+- OAuth 2.0 auth, automatic IAM token generation and caching (12h TTL)
+- Organizations — CRUD, access control
+- Clouds — full lifecycle
+- Folders — operations and permissions
+- Service accounts — create, delete, assign roles
+- User accounts — look up by ID or Yandex Passport login
+- API keys — create and manage
+- Refresh tokens — list, revoke
+- Laravel: Service Provider (auto-discovery), Facade, `.env` config, DI
+- PHP 8.0+, strict types, PSR-12, PHPUnit
 
-### 🔐 Authentication & Security
-
-- **OAuth 2.0** token support
-- **Automatic IAM** token generation
-- **Smart caching** with auto-refresh
-- **Token expiry** management (12h)
-
-### 🏢 Resource Management
-
-- **Organizations** - Full CRUD & access control
-- **Clouds** - Complete lifecycle management
-- **Folders** - Operations & permissions
-- **Service Accounts** - Full lifecycle & access
-- **User Accounts** - Get user info by ID or login
-- **API Keys** - Create & manage API keys
-- **Refresh Tokens** - Token lifecycle
-
-</td>
-<td width="50%">
-
-### 🎯 Laravel Integration
-
-- **Service Provider** with auto-discovery
-- **Facade** for elegant syntax
-- **Config** with .env support
-- **Dependency Injection** ready
-
-### 💎 Code Quality
-
-- **PHP 8.0+** with strict types
-- **Full type hints** everywhere
-- **PSR-12** compliant
-- **Well tested** with PHPUnit
-
-</td>
-</tr>
-</table>
-
-## 📋 Requirements
+## Requirements
 
 | Requirement | Version         |
 |-------------|-----------------|
@@ -73,7 +36,7 @@ Manage organizations, clouds, folders, and IAM authentication with clean, modern
 | Guzzle HTTP | 7.0+            |
 | Laravel     | 8.0+ (optional) |
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -84,7 +47,7 @@ composer require tigusigalpa/yandex-cloud-client-php
 ### Get Your OAuth Token
 
 <details>
-<summary>📝 Click to see how to get OAuth token</summary>
+<summary>How to get an OAuth token</summary>
 
 1.
 Visit [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&client_id=1a6990aa636648e9b2ef855fa7bec2fb)
@@ -92,7 +55,7 @@ Visit [Yandex OAuth](https://oauth.yandex.ru/authorize?response_type=token&clien
 3. Copy the token
 4. Use it in your code
 
-💡 **Tip**: Store tokens securely in environment variables!
+Store tokens in environment variables.
 
 For more details, see [Yandex Cloud Documentation](https://yandex.cloud/ru/docs/iam/concepts/authorization/oauth-token).
 
@@ -114,7 +77,7 @@ YANDEX_CLOUD_CLOUD_ID=your_cloud_id
 YANDEX_CLOUD_FOLDER_ID=your_folder_id
 ```
 
-## 💻 Usage Examples
+## Usage
 
 ### Standalone PHP
 
@@ -143,7 +106,7 @@ $folder = $client->folders()->create(
 ```php
 use Tigusigalpa\YandexCloudClient\Laravel\Facades\YandexCloud;
 
-// Clean and elegant syntax
+// Facade
 $organizations = YandexCloud::organizations()->list();
 $org = YandexCloud::organizations()->get('organization_id');
 
@@ -188,9 +151,9 @@ class CloudController extends Controller
 
 ---
 
-## 📚 Complete API Reference
+## API Reference
 
-### 🏢 Organizations API
+### Organizations API
 
 ```php
 // List organizations
@@ -227,7 +190,7 @@ $result = $client->organizations()->removeRole(
 $bindings = $client->organizations()->listAccessBindings('organization_id');
 ```
 
-### ☁️ Clouds API
+### Clouds API
 
 ```php
 // List clouds
@@ -267,7 +230,7 @@ $result = $client->clouds()->addRole(
 $bindings = $client->clouds()->listAccessBindings('cloud_id');
 ```
 
-### 📁 Folders API
+### Folders API
 
 ```php
 // List folders
@@ -309,7 +272,7 @@ $result = $client->folders()->addRole(
 $bindings = $client->folders()->listAccessBindings('folder_id');
 ```
 
-### 🔄 Refresh Tokens API
+### Refresh Tokens API
 
 ```php
 // List refresh tokens
@@ -319,7 +282,7 @@ $tokens = $client->refreshTokens()->list();
 $result = $client->refreshTokens()->revoke('token_id');
 ```
 
-### 👤 Service Accounts API
+### Service Accounts API
 
 ```php
 // List service accounts in folder
@@ -358,7 +321,7 @@ $result = $client->serviceAccounts()->addRole(
 $bindings = $client->serviceAccounts()->listAccessBindings('service_account_id');
 ```
 
-### 👥 User Accounts API
+### User Accounts API
 
 ```php
 // Get user account by ID
@@ -378,7 +341,7 @@ $client->folders()->addRole(
 );
 ```
 
-### 🔑 API Keys
+### API Keys
 
 ```php
 // List API keys for service account
@@ -408,7 +371,7 @@ $result = $client->apiKeys()->delete('api_key_id');
 
 ---
 
-## 🔐 Advanced Access Control
+## Access Control
 
 ### Adding Multiple Roles at Once
 
@@ -479,7 +442,7 @@ $client->clouds()->addRole(
 
 ---
 
-## ⚠️ Error Handling
+## Error Handling
 
 ```php
 use Tigusigalpa\YandexCloudClient\Exceptions\AuthenticationException;
@@ -502,7 +465,7 @@ try {
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run tests
@@ -520,9 +483,7 @@ composer cs-fix
 
 ---
 
-## 🤝 Contributing
-
-We welcome contributions! Here's how you can help:
+## Contributing
 
 ### Development Setup
 
@@ -540,11 +501,11 @@ cp .env.example .env
 
 ### Contribution Guidelines
 
-- ✅ **Follow PSR-12** coding standards
-- ✅ **Use strict types** and full type hints
-- ✅ **Write tests** for new features
-- ✅ **Update documentation** as needed
-- ✅ **One feature per PR** - keep it focused
+- Follow PSR-12
+- Use strict types and full type hints
+- Write tests for new features
+- Update documentation as needed
+- One feature per PR
 
 ### Pull Request Process
 
@@ -558,18 +519,16 @@ cp .env.example .env
 
 ---
 
-## 🔒 Security
+## Security
 
-If you discover any security vulnerabilities, please email **sovletig@gmail.com** instead of using the issue tracker.
-
-We take security seriously and will respond promptly.
+Report vulnerabilities to **sovletig@gmail.com** instead of the issue tracker.
 
 ---
 
-## 📦 Deployment & Publishing
+## Deployment & Publishing
 
 <details>
-<summary>📋 Click to see deployment checklist</summary>
+<summary>Deployment checklist</summary>
 
 ### Pre-Deployment
 
@@ -620,30 +579,24 @@ git push origin v1.0.0
 
 ---
 
-## 👨‍💻 Author & Contributors
+## Author
 
-**Created with ❤️ by [Igor Sazonov](https://github.com/tigusigalpa)**
+[Igor Sazonov](https://github.com/tigusigalpa)
 
-- 📧 Email: sovletig@gmail.com
-- 🐙 GitHub: [@tigusigalpa](https://github.com/tigusigalpa)
+- Email: sovletig@gmail.com
+- GitHub: [@tigusigalpa](https://github.com/tigusigalpa)
 
-### Contributors
-
-Thanks to [all contributors](../../contributors) who help improve this package!
+Thanks to [all contributors](../../contributors).
 
 ---
 
-## 📄 License
+## License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-Free to use in personal and commercial projects. ✨
+[MIT](LICENSE)
 
 ---
 
-## 🔗 Related Packages
-
-Explore our other Yandex Cloud packages:
+## Related Packages
 
 | Package                  | Description           | Links                                                                                                                                              |
 |--------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -653,32 +606,18 @@ Explore our other Yandex Cloud packages:
 
 ---
 
-## 🔗 Useful Links
+## Links
 
-### Official Documentation
+**Yandex Cloud docs:**
 
-- 📖 [Yandex Cloud Documentation](https://yandex.cloud/docs)
-- 🏢 [Organization API Reference](https://yandex.cloud/ru/docs/organization/api-ref/)
-- ☁️ [Resource Manager API Reference](https://yandex.cloud/ru/docs/resource-manager/api-ref/)
-- 🔐 [IAM API Reference](https://yandex.cloud/ru/docs/iam/api-ref/)
+- [Yandex Cloud Documentation](https://yandex.cloud/docs)
+- [Organization API](https://yandex.cloud/ru/docs/organization/api-ref/)
+- [Resource Manager API](https://yandex.cloud/ru/docs/resource-manager/api-ref/)
+- [IAM API](https://yandex.cloud/ru/docs/iam/api-ref/)
 
-### Package Resources
+**Package:**
 
-- 📦 [Packagist Package](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
-- 🐙 [GitHub Repository](https://github.com/tigusigalpa/yandex-cloud-client-php)
-- 🐛 [Issue Tracker](https://github.com/tigusigalpa/yandex-cloud-client-php/issues)
-- 💬 [Discussions](https://github.com/tigusigalpa/yandex-cloud-client-php/discussions)
-
----
-
-<div align="center">
-
-### ⭐ Star us on GitHub!
-
-If this package helped you, please consider giving it a star ⭐
-
-**Made with ❤️ for the PHP community**
-
-[Report Bug](https://github.com/tigusigalpa/yandex-cloud-client-php/issues) • [Request Feature](https://github.com/tigusigalpa/yandex-cloud-client-php/issues) • [Contribute](https://github.com/tigusigalpa/yandex-cloud-client-php/pulls)
-
-</div>
+- [Packagist](https://packagist.org/packages/tigusigalpa/yandex-cloud-client-php)
+- [GitHub](https://github.com/tigusigalpa/yandex-cloud-client-php)
+- [Issues](https://github.com/tigusigalpa/yandex-cloud-client-php/issues)
+- [Discussions](https://github.com/tigusigalpa/yandex-cloud-client-php/discussions)
